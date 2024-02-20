@@ -1,0 +1,282 @@
+/* 
+#########################################################
+#########################################################
+        Normalize Style
+#########################################################
+#########################################################
+*/
+
+@font-face {
+    font-family: main;
+    src: url(./../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: logo;
+    src: url(./../fonts/Allison-Regular.ttf);
+}
+
+body {
+    font-family: main;
+    font-size: 15px;
+}
+
+/* 
+#########################################################
+#########################################################
+        Nav Bar Style
+#########################################################
+#########################################################
+*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px;
+    height: 59px;
+    border-bottom: 1px solid #aaaaaa63;
+}
+
+nav>.logo {
+    font-family: logo;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav>ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav>ul>li {
+    margin: 0 10px;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    color: #333333a3;
+}
+
+nav>ul>li:hover {
+    cursor: pointer;
+    color: #333;
+}
+
+nav>ul>li.active {
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+}
+
+nav>.option {
+    display: flex;
+    align-items: center;
+}
+
+nav>.option>div {
+    margin: 0 10px;
+}
+
+nav>.option>div>img.icon {
+    width: 1.3em;
+    height: 1.3em;
+}
+
+/* 
+#########################################################
+#########################################################
+        Section Product Style
+#########################################################
+#########################################################
+*/
+
+section.product {
+    min-height: calc(100vh - 60px);
+    background: #eeeeee59;
+    display: grid;
+    grid-template-areas: 'image details';
+    grid-template-columns: 1fr 0.75fr;
+    grid-gap: 20px;
+}
+
+.product-img,
+.product-details {
+    padding: 10px 15px;
+}
+
+.product-img {
+    grid-area: image;
+}
+
+.product-img>.img {
+    width: 100%;
+}
+
+.product-details {
+    grid-area: details;
+}
+
+.product-details>.address {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+
+.product-details>.address span {
+    width: 1px;
+    height: 20px;
+    display: inline-block;
+    background: #3333333d;
+    margin: 5px;
+}
+
+.product-details>.title {
+    /* font-size: 2em; */
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.product-details>.rank {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.product-details>.rank>img.icon.start-rank {
+    width: 1.1em;
+}
+
+.product-details>.rank>.followers {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.product-details>.note {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.product-details>.note>div {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.product-details>.product-description {
+    color: #333333c2;
+    padding-right: 15px;
+    width: 80%;
+}
+
+.product-details>.note.size {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #333333c2;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.product-details>.note.size>.active {
+    font-weight: bold;
+    color: #333;
+    border-color: #333;
+}
+
+.product-details>.note.size.shoes>div {
+    width: 25px;
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+}
+
+.product-details>.note.size.shoes>div:hover {
+    cursor: pointer;
+}
+
+.product-details>.note.size.shoes>div.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.product-details>.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 20px;
+}
+
+.btn.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn>img {
+    width: 1em;
+}
+
+.amount {
+    margin: 0px 15px;
+}
+
+.product-img-main {
+    display: flex;
+    justify-content: center;
+}
+
+.product-img-main>img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.gallery {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+.gallery>div {
+    position: relative;
+    margin: 0 10px;
+    border-radius: 10px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.gallery>div:hover {
+    cursor: pointer;
+}
+
+.gallery>div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000069;
+}
+
+.gallery>div.active::before {
+    background-color: transparent;
+}
+
+.gallery img {
+    width: 100%;
+    height: 80px;
+}
